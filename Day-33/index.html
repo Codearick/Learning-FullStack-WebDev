@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MultiColor NavBar</title>
+        <style>
+            :root{
+                --color1: rgb(251, 166, 166);
+                --color2: rgb(162, 162, 214);
+                --color3: rgb(217, 160, 217);
+            }
+            @media screen and (max-width:466px){
+                body{
+                    background-color: black;
+                }
+            }
+            ul{
+                display:flex;
+            }
+            ul li{
+                background-color: var(--color1);
+                border: 2px solid black;
+                list-style: none;
+                padding: 25px;
+            }
+            ul li:first-child{
+                background-color: var(--color2);
+            }
+            ul li:nth-child(2){
+                background-color: var(--color3);
+            }
+            .navcontainer{
+                background-color: rgb(230, 230, 187);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navcontainer">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </body>
+</html>

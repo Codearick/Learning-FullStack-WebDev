@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nav using Flexbox</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            nav {
+                margin: 10px;
+                overflow: hidden;
+                display: flex;
+                height: 15vh;
+            }
+            .logocontainer img{
+                height: 8vh;
+                margin-left: 53px;
+                padding: 6px;
+            }
+            nav .navselect {
+                margin: 18px 18px 18px auto;
+                padding: 5px;
+            }
+            nav select {
+                font-family: 'Poppins', sans-serif;
+                border: none;
+                font-size: 17px;
+            }
+            .translationcontainer img{
+                margin: 19px 19px auto 19px;
+                padding: 10px;
+                height: 3vh;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logocontainer"> 
+                    <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/Dark-logo.png" alt="image" id="logo">
+                </div>
+                <div class="navselect">
+
+                    <select name="Product" id="">
+                        <option value="product1">Product</option>
+                        <option value="product2">Product2</option>
+                        <option value="product3">Product3</option>
+                    </select>
+                    <select name="Pricing" id="">
+                        <option value="product1">Pricing</option>
+                        <option value="product2">Pricing2</option>
+                        <option value="product3">Pricing3</option>
+                    </select>
+                    <select name="Resources" id="">
+                        <option value="product1">Resource</option>
+                        <option value="product2">Resource2</option>
+                        <option value="product3">Resource3</option>
+                    </select>
+                    <select
+                        name="aboutus" id="">
+                        <!-- <option value="" disabled selected>About us</option> -->
+                        <option value="product1">About us</option>
+                        <option value="product2">Contact us</option>
+                        <option value="product3">Testimonials</option>
+                    </select>
+                </div>
+                <div class="translationcontainer">
+                    <img src="translation.png" alt="" id="translation">
+                </div>
+
+            </nav>
+        </header>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Animation</title>
+    <style>
+        .ball{
+            height: 121px;
+            width: 121px;
+            border-radius: 190px;
+            background-color: antiquewhite;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: AniX 5s linear infinite,
+                       AniY 1s ease-out infinite alternate;
+        }
+        .container{
+            overflow: hidden;
+            position: relative;
+            height: 80vh;
+            width: 100vw;
+            background-color: aquamarine;
+        }
+        @keyframes AniX {
+          from{
+            left: 0;
+          }
+          to{
+            left: 100%;
+          }
+        }
+        @keyframes AniY {
+           from{
+            bottom: 0;
+           }
+           to{
+            bottom: 50%;
+           }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball">
+        </div>
+    </div>
+</body>
+</html>

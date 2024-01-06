@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        .container{
+            height: 80vh;
+            width: 30vw;
+            background-color: rgb(9,106 ,106);
+        }
+        .box{
+            width: 34px;
+            height: 45px;
+            /* animation-name: RohanKoAnimation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.61, 0.61, 0.57, 0.56);
+            animation-delay: 1ms;
+            animation-direction: alternate-reverse;
+            animation-play-state: paused; */
+            animation: RohanKoAnimation 2s cubic-bezier(0.61, 0.61, 0.57, 0.56) backwards,
+                       Rohan2 2s cubic-bezier(0.61, 0.61, 0.57, 0.56) 1; 
+
+        }
+        @keyframes RohanKoAnimation {
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: yellow;
+                transform: translateX(1000px);
+            }
+        }
+        @keyframes Rohan2 {
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(200deg);
+            }
+            50%{
+                transform: rotate(220deg);
+            }
+            80%{
+                transform: rotate(300deg);
+            }
+            100%{
+                transform: rotate(320deg);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+</body>
+</html>

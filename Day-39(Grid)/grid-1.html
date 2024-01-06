@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Grid-1</title>
+        <style>
+            .container {
+                width: 80vw;
+                height: 100vh;
+                border: 2px solid black;
+                display: grid;
+                /* grid-template-columns: [pehla]120px [doosra]100px [t];
+                grid-template-rows: 100px 100px 100px; */
+                /* grid-template-columns: 1fr 2fr 1fr ; */
+                /* grid-template-columns: repeat(4,1fr); */
+                /* grid-template-columns: repeat(4,minmax(100px,1fr)); */
+                grid-template-columns: repeat(4,80px);
+                grid-template-rows: repeat(2,80px);
+                /* gap: 34px; */
+                row-gap: 10px;
+                column-gap: 44px;
+                /* justify-content: center; Used When container is smaller than item that over flows */
+                /* align-content: center; Used When container is smaller than item that over flows */
+                place-content: center ;
+                justify-items: center;
+                align-items: center;
+            }
+            .items {
+                border: 2px solid red;
+                height: 55px;
+                width: 55px;
+            }
+            .item-4{
+                /* grid-row: 1/2;
+                grid-column: pehla/doosra; */
+            }
+            .item-1{
+                /* grid-row: 1/2;
+                grid-column: 1/2; */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="items item-1">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items item-4">4</div>
+            <div class="items">5</div>
+        </div>
+    </body>
+</html>
