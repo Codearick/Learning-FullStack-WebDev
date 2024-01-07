@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inserting and Deleting elements in Javascript</title>
+        <style>
+            .container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 63vh;
+                width: 72vw;
+                gap: 23px;
+                border: 2px solid black;
+                background-color: aquamarine;
+                color:rgb(130, 130, 44);
+            }
+            .box{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 23vh;
+                width: 22vw;
+                border: 2px solid black;
+                background-color: rgb(82, 171, 222);
+                color:rgb(20, 238, 144);
+            }
+            .purple{
+                background-color: rgb(237, 213, 237);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            Hey I am a container
+            <div class="box" style="display: flex;" data-createdby="Rohan" data-conceptby="Baby">Hey Iam a box1</div>
+            <div class="box">Hey Iam a box2</div>
+        </div>
+        <script src="script.js"></script>
+        <script>
+            //==========================Appending element or div methods===========================
+
+            let div = document.createElement("div");
+            div.innerHTML = "I have been added by <b> Rohan </b>";
+            div.setAttribute("class", "created");
+            
+            // document.querySelector(".container").append(div); //append method adds elements at last of the div.
+            // document.querySelector(".container").before(div);//before method adds element before the parent element.
+            // document.querySelector(".container").after(div); //after method adds elements after the parent element.
+
+            //============================Inserting HTML methods===================================
+
+            let cont = document.querySelector(".container");
+            // cont.insertAdjacentHTML("beforebegin","<b>I am under the water, here too much raining....</b>");
+            // cont.insertAdjacentHTML("afterbegin","<b>I am under the water, here too much raining....</b>");
+            // cont.insertAdjacentHTML("beforeend","<b>I am under the water, here too much raining....</b>");
+            // cont.insertAdjacentHTML("afterend","<b>I am under the water, here too much raining....</b>");
+
+            //============================Inserting Elements methods===================================
+           
+            // cont.insertAdjacentElement("beforeend",div);
+            // cont.insertAdjacentElement("afterbegin",div);
+            // cont.insertAdjacentElement("beforebegin",div);
+            // cont.insertAdjacentElement("afterend",div);
+
+            //============================Inserting Text methods=====================================
+
+            // cont.insertAdjacentText("afterbegin","Hello I am under the water here too much raining...")
+            // cont.insertAdjacentText("beforebegin","Black color wow, orange wow wow wow");
+            // cont.insertAdjacentText("beforeend","So beautiful , so elegent");
+            // cont.insertAdjacentText("afterend","Just looking like a wow");
+
+            //============================Removing elements method===================================
+            // document.querySelector(".box").remove(); // Removes first box 
+
+            //============================Class Name and class lists===================================
+            console.log(document.querySelector(".container").classList);
+            console.log(document.querySelector(".container").className);
+            document.querySelector(".container").classList.add("moye-moye"); // adds mentioned classes on selected element(.container)
+            document.querySelector(".container").classList.remove("moye-moye"); // removes mentioned class on selected element(.container) 
+            document.querySelector(".container").classList.toggle("purple"); // toggle method adds if false removes if true.
+
+        </script>
+    </body>
+</html>
