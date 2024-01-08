@@ -36,16 +36,18 @@ My primary goals in this learning journey include:
 3. Check the `/resources` folder for helpful documents and reference materials.
 
 ## Daily Log
-### [Day 1](/day-01):
+### [Day 1](/Day-01):
 - Explored HTML basics.
 - Styled a simple webpage with CSS.
 
-### [Day 2](/day-02):
+### [Day 2](/Day-02):
 - Introduced to JavaScript fundamentals.
 - Created a basic interactive webpage.
 *(Continue updating this section as you progress.)*
 
 ## Resources
+- [CodeWithHarry | Sigma Web Development Course](https://youtube.com/playlist?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w&si=ys7T7lPpWq73rHbF): Learn web 
+  development with CodeWithHarry.
 - [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/): A comprehensive resource for web developers.
 - [W3Schools](https://www.w3schools.com/): Online tutorials for web development.
 - [freeCodeCamp](https://www.freecodecamp.org/): Interactive learning platform for web development.
