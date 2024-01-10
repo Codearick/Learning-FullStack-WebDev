@@ -8,7 +8,7 @@ console.log("Rehan");
 let redBox = document.getElementById("red");
 redBox.style.backgroundColor = "red";
 
-//Selectin element by querySelector
+//Selecting element by querySelector
 //document.querySelector(".box").style.backgroundColor = "green";
 document.querySelectorAll(".box").forEach((e,i) =>{
     e.style.backgroundColor = i%2===0?"green":"red";
