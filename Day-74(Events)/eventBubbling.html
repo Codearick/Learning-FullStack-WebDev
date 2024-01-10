@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event Bubbling</title>
+        <style>
+            .container {
+                background-color: rgb(222, 228, 155);
+                border: 2px solid black;
+                padding: 34px;
+            }
+            .childcontainer {
+                background-color: rgb(215, 160, 205);
+                border: 2px solid black;
+                padding: 34px;
+            }
+            .child {
+                background-color: aliceblue;
+                border: 2px solid black;
+                padding: 34px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <section class="childcontainer">
+                <div class="child">
+                    <h1>I am a first heading child</h1>
+                    <h2>I am a second heading child.</h2>
+                </div>
+            </section>
+        </div>
+        <script>
+
+            // document.querySelector(".child").children[1].addEventListener("click",(event)=>{
+            //     // event.stopPropagation();
+            //     alert("Second child was clicked!");
+            // })
+            // document.querySelector(".child").children[0].addEventListener("click",(event)=>{
+            //     //event.stopPropagation();
+            //     alert("First child was clicked!");
+            // })
+
+            document.querySelector(".child").addEventListener("click", (event) => {
+                event.stopPropagation();
+                alert("Child was clicked!");
+            });
+            document.querySelector(".childcontainer").addEventListener("click", (event) => {
+                event.stopPropagation();
+                alert("Child container was clicked!");
+            })
+            document.querySelector(".container").addEventListener("click", () => {
+                alert("Container was clicked!");
+            })
+
+            const target = document.querySelector(".container");
+            target.removeEventListener("click", () => {
+                alert("Event listener removed!");
+            });
+            function getRandomColor() {
+                let var1 = Math.floor((Math.random() * 255));
+                let var2 = Math.floor((Math.random() * 255));
+                let var3 = Math.floor((Math.random() * 255));
+
+                return `rgb(${var1},${var2},${var3})`;
+            }
+
+
+// =============================setIntervalfunction==================
+            // let disco = setInterval(() => {
+            //     document.querySelector(".container").style.background = getRandomColor();
+            //     document.querySelector(".childcontainer").style.background = getRandomColor();
+            //     document.querySelector(".child").style.background = getRandomColor();
+            // }, 1000);
+            // console.log(disco); // output is 1 and
+            // clearInterval(1); clears the interval function.
+// ==============================setInterval function====================
+            let disco = setTimeout(() => {
+                document.querySelector(".container").style.background = getRandomColor();
+                document.querySelector(".childcontainer").style.background = getRandomColor();
+                document.querySelector(".child").style.background = getRandomColor();
+            }, 1000);
+            //clearTimeout(disco); // clears timeout function.
+        </script>
+    </body>
+</html>
