@@ -36,14 +36,58 @@ My primary goals in this learning journey include:
 3. Check the `/resources` folder for helpful documents and reference materials.
 
 ## Daily Log
-### [Day 1](/Day-01):
-- Explored HTML basics.
-- Styled a simple webpage with CSS.
+### [Day 1](/Day-01) to [Day 13](/Day-13):
+- Explored HTML where I learned following topics:
+- Basic structure of HTML.
+- Heading,Paragraph and links.
+- Image,lists and Tables.
+- SEO and Core Web Vitals.
+- Forms and Input Tags.
+- Inline and Block Elements.
+- ID and Classes.
+- Video, Audio and Media.
+- Semantic Tags.
+- Pure HTML media player(Exercise-1(Named Ex on Day-12)
+- Entites and code tag and more on HTML
 
-### [Day 2](/Day-02):
-- Introduced to JavaScript fundamentals.
-- Created a basic interactive webpage.
-*(Continue updating this section as you progress.)*
+### [Day 14](/Day-14) to [Day 53](/Day-53):
+- Introduced to CSS fundamentals:
+- Inline, External and Internal CSS.
+- CSS Selectors.
+- CSS Box Model(Margin,Padding and borders)
+- Font,Text and color properties.
+- Specificity and cascade.
+- CSS Sizing units(px,rem,em,vh,vw,% and more)
+- CSS Display Property.
+- Shadows and outlines.
+- Styling lists using CSS.
+- CSS overflow property.
+- CSS position property.
+- CSS Variables.
+- CSS MediaQueries.
+- CSS Float and Clear.
+- CSS FlexBox.
+- CSS Grid.
+- CSS Transform.
+- CSS Transition.
+- CSS Animations.
+- CSS Objectfit and object cover.
+- CSS Filter.
+- Figma Basics.
+- Project - Netflix landing page clone.
+- And all the exercises named with "(Ex)" folder in between.
+  
+### [Day 54](/Day-54) to [Day 84](/Day-84):
+- Introduced to Javascript:
+- Javascript variable, Datatypes and Objects.
+- Javscript conditionals (if, else, else-if ladder etc.).
+- Loops in Javascript.
+- Javascript Functions.
+- Javascript Strings.
+- Javscript Arrays.
+- Document Object Model(DOM) in Javascript.
+- Events,Event Bubbling, setInterval and setTimeout.
+- Javscript callbacks and promises.
 
 ## Resources
 - [CodeWithHarry | Sigma Web Development Course](https://youtube.com/playlist?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w&si=ys7T7lPpWq73rHbF): Learn web 
