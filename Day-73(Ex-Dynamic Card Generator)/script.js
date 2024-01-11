@@ -1,14 +1,51 @@
-// function createCard(title, cName, views, monthsOld, duration, thumbnail){
-//    return `document.querySelector(".cards")`; 
-// };
 
+let i = 2;
+function createCard() {
+    let title = "A day in a life of a Rohan Gautam | Rehan Gautam";
+    let cName = "CodeWithRehan";
+    let views = 560000;
+    let monthsOld = 7;
+    let duration = "31:22";
+    let thumbnail = "assets/myself.jpg";
 
- 
-//createCard("A day in a life of  a Software Engineer | Rohan Gautam ", 56000, 7, "31:22", "assets/myself.png");
+    // Create the card container
+    let card = document.createElement("div");
+    card.className = "cards";
 
+    // Create card content
+    let cardContent = `
+    <span>${i++}</span>
+    <div class="thumbNail"><img src=${thumbnail} alt="">
+    </div>
+    <div class="videoMeta1">
+        <div class="duration">
+            ${duration}
+        </div>
+        <div class="title">
+            <span>${title}</span>
+        </div>
+        <div class="videoMeta2">
+            <span>${cName} &nbsp</span>
+            <span>.</span>
+            <span>&nbsp;${viewsSuffix(views)}&nbsp;</span>
+            <span>.</span>
+            <span>&nbsp;${monthsOld} months old</span>
+        </div>
+    </div>
+    `;
 
-let views = 79878;
-function viewsSuffix(){
+    // Set the innerHTML of the card
+    card.innerHTML = cardContent;
+
+    // Get the container
+    let container = document.querySelector(".container");
+
+    // Add the card based on the specified position
+    container.appendChild(card); // Add at the top
+
+    console.log("createCard Function worked");
+}
+function viewsSuffix(views){
     if(views >= 1000000000){
         return (views / 1000000000).toFixed(1) + 'B';
     }
@@ -22,27 +59,3 @@ function viewsSuffix(){
         return views.toString();
     }
 }
-
-function createCard(){
-    let title = "A day in a life of  a Software Engineer | Rohan Gautam "
-    document.querySelector(".title").innerText = title; 
-
-    let cName = "CodeWithRehan";
-    document.querySelector(".videoMeta2").children[0].innerHTML = cName;
-
-    let formattedViews = viewsSuffix(views);
-    //document.querySelectorAll(".videoMeta2")[0].querySelector("span:nth-child(2)").innerText = formattedViews;
-    document.querySelector(".videoMeta2").children[2].innerHTML = formattedViews;
-
-    let uploadedDate = "8 Months Old";
-    // document.querySelectorAll(".videoMeta2")[0].querySelector("span:nth-child(3)").innerText = uploadedDate;
-    document.querySelector(".videoMeta2").children[4].innerText = uploadedDate;
-
-    console.log("createCard Function worked");
-    let cont = document.querySelector(".container");
-    let cards = document.querySelectorAll(".cards");
-    cards.forEach(element => {
-        // cont.insertAdjacentElement("afterbegin",element);
-        cont.appendChild(element);
-    });
- };

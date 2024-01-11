@@ -35,6 +35,7 @@ aside {
     position: fixed;
     top: 70px;
     left: 85px;
+    background-color: black;
 }
 .sideMenu .btn {
     cursor: pointer;
@@ -42,56 +43,36 @@ aside {
     width: 25vw;
     border: none;
     border-radius: 18px;
-    background-color: rgb(186, 202, 217);
-    
-
+    background-color: rgb(186, 202, 217);   
 }
-
 .container {
     display: flex;
+    flex-direction: column;
     background-color: black;
-    position: fixed;
-    height: 100vh;
+    position: absolute;
     width: 62vw;
+    height: auto;
     top: 75px;
     right: 2px;
 }
-
+.cards :hover{
+    border: 1px solid rgb(67, 66, 66);
+    background-color: rgb(67, 66, 66);
+}
 .cards {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border: 2px solid rgb(117, 116, 116);
+    border: 1px solid rgb(67, 66, 66);
     background-color: black;
     color: white;
     height: 15vh;
-    width: 61vw;
+    width: 58vw;
     margin: 10px;
     padding: 5px 10px;
-    /* Remove fixed positioning properties */
-    /* left: 478px;
-    top: -610px; */
     border-radius: 10px;
     z-index: 5;
 }
-
-/* .cards {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    border: 2px solid rgb(117, 116, 116);
-    background-color: black;
-    color: white;
-    height: 15vh;
-    width: 61vw;
-    margin: 10px;
-    padding: 5px 10px;
-    position: static;
-    left: 478px;
-    top: -610px;
-    border-radius: 10px;
-    z-index: 5;
-} */
 
 .thumbNail img {
     height: 14vh;
@@ -100,21 +81,17 @@ aside {
     border-radius: 20px;
     position: relative;
 }
-.videoMeta1{
-
-}
-
 .duration {
+    font-size: x-small;
     text-align: center;
     height: 2vh;
     width: 3vw;
     position: relative;
-    right: 59px;
-    top: 48px;
+    right: 68px;
+    top: 45px;
     border-radius: 15px;
     background-color: black;
     padding: 5px;
-    padding-bottom: 4px;
     z-index: 1;
 }
 
@@ -124,8 +101,8 @@ aside {
     font-weight: 500;
     position: relative;
     padding: 5px;
-    top: -31px;
-    right: 4px;
+    top: -37px;
+
 }
 .videoMeta2{
     font-family: Roboto, sans-serif;
