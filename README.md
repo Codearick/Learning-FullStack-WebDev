@@ -32,8 +32,9 @@ My primary goals in this learning journey include:
 
 ## How to Use This Repository
 1. Navigate to the specific day's folder to view the code and notes for that day.
-2. Explore the `/projects` folder for larger projects and exercises.
-3. Check the `/resources` folder for helpful documents and reference materials.
+2. Explore the folders with suffix "Ex" for exercises on recent learnings.
+3. Explore the `/projects` folder for larger projects and exercises.
+4. Check the `/resources` folder for helpful documents and reference materials.
 
 ## Daily Log
 ### [Day 1](/Day-01) to [Day 13](/Day-13):
