@@ -57,14 +57,14 @@ let prom2 = new Promise((resolve, reject) => {
 //   console.log(error);
 // }
 // )
-//======== 4) Promise.reject(value)
+//======== 5) Promise.reject(value)
 // let prom3 = Promise.resolve("Code didn't Work!").then(a=>{
 //     console.log(a);
 // }).catch((error) => {
 //   console.log(error);
 // });
 
-//======== 4) Promise.any(promises) // Returns aggregate error if all promise were rejected else returns if any or all promises are resolved.
+//======== 6) Promise.any(promises) // Returns aggregate error if all promise were rejected else returns if any or all promises are resolved.
 let prom3 = Promise.any([prom1,prom2]).then(a=>{
     console.log(a);
 }).catch((error) => {
