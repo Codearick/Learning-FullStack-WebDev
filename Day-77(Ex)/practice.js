@@ -40,25 +40,61 @@
 //===============================================================================
 // 3) Create a promise which rejects after 3 seconds. Use an async/await to get it's value and use try catch to handle its error.
 
-const prom  = async () => {
-    new Promise((resolve,reject)=>{
-        if(true){
-            setTimeout(() => {
-                reject("Rejected unfortunately!")
-            }, 3000);
-        }
-    })
-}
-
-let main = async ()=>{
-    let a = await prom();
-    try {
-        console.log(a);
-    } catch (a) {
-        console.log(a);
-    }
-}
-main();
+// const prom  = () => {
+//     return new Promise((resolve,reject)=>{
+//         if(true){
+//             setTimeout(() => {
+//                 reject("Rejected unfortunately!")
+//             }, 3000);
+//         }
+//     })
+// }
+// let main = async ()=>{
+//     try {
+//         let a = await prom();
+//         console.log(a);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// main();
 
 //===============================================================================
 // 4) Write a program using promise.all() inside an aync/await to await 3 promises. Compare it's results with the case where we await these promises one by one.
+
+let prom1 = new Promise((resolve,reject)=>{
+    let rand = Math.random();
+    if(rand<0.5){
+        resolve("Successfull Promise 1!");
+    }
+    else{
+        reject("Unsuccessfull promise 1");
+    }
+})
+let prom2 = new Promise((resolve,reject)=>{
+    let rand = Math.random();
+    if(rand<0.5){
+        resolve("Successfull Promise 2!");
+    }
+    else{
+        reject("Unsuccessfull promise 2");
+    }
+})
+let prom3 = new Promise((resolve,reject)=>{
+    let rand = Math.random();
+    if(rand<0.5){
+        resolve("Successfull Promise 3!");
+    }
+    else{
+        reject("Unsuccessfull promise 3");
+    }
+})
+
+let main = async () => {
+  await Promise.all([prom1,prom2,prom3]).then((a) => {
+    console.log(a);
+  }).catch((error) => {
+    console.log(error);
+  })
+}
+main();
