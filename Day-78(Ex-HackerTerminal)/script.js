@@ -1,58 +1,40 @@
+// 
+
 document.body.style.backgroundColor = "green";
-let div = document.createElement("div");
-let div1 = document.createElement("div");
-let div2 = document.createElement("div");
-let div3 = document.createElement("div");
-let div4 = document.createElement("div");
-document.body.append(div);
 console.log("Script is running!");
 
-async function showDisplay() {
-    let rand = Math.floor(Math.random() * (1000 - 1000 + 1)) + 1000;
-
-    let m1 = await new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(div.textContent = "Initializing Hacking");
-        }, rand);
-    });
-
-    let m2 = await new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(div1.textContent = "Reading your files...");
-        }, rand);
-    })
-
-    let m3 = await new Promise((resolve, reject) => {
-        setTimeout(() => {
-            div.append = "<p>Password Files Detected</p>";
-        }, rand);
-    })
-
-    let m4 = await new Promise((resolve, reject) => {
-        setTimeout(() => {
-            div.textContent = "Sending all the passwords and personal files to server";
-        }, rand);
-    })
-
-    let m5 = await new Promise((resolve, reject) => {
-        setTimeout(() => {
-            div.textContent = "Cleaning up";
-        }, rand);
-    })
-
-    console.log(rand);
+function getRandomDelay() {
+    return Math.floor(Math.random() * (7000 - 1000 + 1)) + 1000;
 }
-const main = () => {
-    Promiseall([showDisplay().m1,showDisplay.m2,showDisplay.m3,showDisplay.m4,showDisplay.m5]).then(a => {
-        console.log(a);
-    }).catch(error => {
-        console.log(error);
-    });
-} 
-main();
 
-function getDot() {
-    setTimeout(() => {
-        div.textContent = ".";
-    }, 2000);
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+async function showTextWithBlinkingDots(text) {
+    let delayTime = getRandomDelay();
+    let div = document.createElement("div");
+    document.body.append(div);
+
+    for (let i = 0; i < 5; i++) {
+        div.innerHTML = text + ".".repeat(i);
+        await delay(1000); // Adjust the timing for the blinking effect
+    }
+
+    await delay(delayTime - 1500); // Wait for the remaining time before clearing the text
+    div.innerHTML = text;
+}
+
+
+    async function showAll() {
+        await showTextWithBlinkingDots("Initializing Hacking");
+        await showTextWithBlinkingDots("Reading your files");
+        await showTextWithBlinkingDots("Password Files Detected");
+        await showTextWithBlinkingDots("Sending all the passwords and personal files to server");
+        await showTextWithBlinkingDots("Cleaning up");
+    }
+    for(let i = 0; i<20; i++){
+        showAll();
+    }
+    
+
