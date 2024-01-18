@@ -7,7 +7,7 @@
     font-family: 'Sen', sans-serif;
 }
 body{
-    background-color: black;
+    background-color: #000000;
     color: white;
 }
 .left{
@@ -50,4 +50,49 @@ body{
 }
 .footer a{
     color: gray;
+}
+.right{
+    margin: 7px 0;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #111111;
+}
+.header > *{
+    padding: 18px;
+}
+.right-main{
+    background-color: #1e1e1e;
+}
+.spotifyPlaylists > h1{
+    font-size: 27px;
+    margin-left: 13px;
+    margin-bottom: 15px;
+}
+.spotifyPlaylists{
+    padding: 4px;
+    background-color: #1e1e1e1e;
+}
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    gap: 12px;
+}
+.card > *{
+    padding-top: 10px;
+    font-size: 18px;
+}
+.card{
+    width: 200px;
+    background-color: #242424;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 4px;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 8px;
 }
