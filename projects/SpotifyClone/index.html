@@ -21,9 +21,20 @@
                     <li><img class="invert" src="search.svg" alt="search">Search</li>
                 </ul>
             </div>
+
             <div class="library bg-grey rounded m-1 p-1">
-                <div><img class="invert" src="playlist.svg" alt=""></div>
-                <span> Your Library</span>
+
+                <div class="heading">
+                    <div><img class="invert" src="playlist.svg" alt=""></div>
+                    <span> Your Library</span>
+                </div>
+
+                <div class="songlist">
+                    <ul>
+                    
+                    </ul>
+                </div>
+
                 <div class="footer">
                     <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
                     <div><a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a></div>
@@ -60,27 +71,43 @@
                 <h1>Spotify Playlists</h1>
                 <div class="cardContainer">     
                     
+  
                     <div class="card">
                         <div class="play">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 22v-20l18 10-18 10z" /></svg>
                         </div>
-                        <img src="https://i.scdn.co/image/ab67706f000000028998614b3281e12596844039" alt="">
-                        <h3><b>Night Rain</b></h3>
-                        <p>Sleep with the sound of pouring rain and... </p>
+                        <img src="https://i.scdn.co/image/ab67706f00000002d771dc645afe9b87978b1d3e" alt="">
+                        <h3>All out of 2020s</h3>
+                        <p>The biggest songs of the 2020s </p>
                     </div>
-      
+  
+                    <div class="card">
+                        <div class="play">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 22v-20l18 10-18 10z" /></svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f00000002d771dc645afe9b87978b1d3e" alt="">
+                        <h3>All out of 2020s</h3>
+                        <p>The biggest songs of the 2020s </p>
+                    </div>
+            
                 </div>
                 <div class="playbar">
+                  
                     <div class="songinfo">
-
+            
                     </div>
-                    <div class="songbuttons">
-                        <img src="prevsong.svg" alt="">
-                        <img src="pause.svg" alt="">
-                        <img src="nextsong.svg" alt="">
+                    <div class="songbuttons invert">
+                        <img id="previous" src="prevsong.svg" alt="">
+                        <img id="pause" src="pause.svg" alt="">
+                        <img id="next" src="nextsong.svg" alt="">
+                    </div>
+                    <div class="seekbar">
+                        <div class="circle">
+
+                        </div>
                     </div>
                     <div class="songtime">
-                        
+            
                     </div>
                 </div>
             </div>
