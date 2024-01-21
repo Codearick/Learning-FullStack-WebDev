@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -212,11 +210,29 @@ body{
     height: 20px;
     border-radius: 12px;
 }
+.playbarimg{
+    position: absolute;
+    left: 19px;
+}
+#pause{
+    width: 15px;
+    height: 15px;
+    border-radius: 24px;
+    padding: 9px;
+    margin: 3px;
+    background-color: white;
+}
+.playbar > .songinfo{
+    position: absolute;
+    top: 25px;
+    left: 89px;
+    font-size: 14px;
+    font-weight: 400;
+}
 .seekbar{
     height: 4px;
     background-color: gray;
-    /* border: 2px solid gray; */
-    width: 38vw;
+    width: 26vw;
     border-radius: 3px;
     position: absolute;
     bottom: 15px;
@@ -229,6 +245,24 @@ body{
     position: absolute;
     bottom: -4.7px;
 }
-.playbar > .songbuttons img{
-    cursor: pointer;
+.playbar > .songduration{
+    position: absolute;
+    right: 256px;
+    bottom: 10px;
+    font-size: x-small;
 }
+.playbar > .currenttime{
+    position: absolute;
+    left: 256px;
+    bottom: 10px;
+    font-size: x-small;
+}
+.playbar > .songbuttons{
+    position: absolute;
+    top: 8px;
+    cursor: pointer;
+    display: flex;
+    gap: 7px;
+}
+
+
