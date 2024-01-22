@@ -27,12 +27,12 @@ async function getSongs() {
     return songs;
 }
 
-const playMusic = async (track,pause = false) => {
+const playMusic = async (track, pause = false) => {
     currentSong.src = "/songs/" + track;
-    if(!pause){
+    if (!pause) {
         await currentSong.play();
         pause.src = pause.svg;
-        document.querySelector(".songinfo :nth-child(1)").innerHTML = decodeURI(track).replace(".mp3"," ");
+        document.querySelector(".songinfo :nth-child(1)").innerHTML = decodeURI(track).replace(".mp3", " ");
         document.querySelector(".songinfo :nth-child(2)").innerHTML = "Rohan";
     }
 }
@@ -41,7 +41,7 @@ async function main() {
     //Get the list of songs
     let songs = await getSongs();
     const randomIndex = Math.floor(Math.random() * songs.length);
-    playMusic(songs[randomIndex],true);
+    playMusic(songs[randomIndex], true);
     let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0];
     for (const song of songs) {
         songUL.innerHTML = songUL.innerHTML + `<li><img class="invert" src="music.svg" alt="">
@@ -76,18 +76,37 @@ async function main() {
             console.error("Error during playback:", error.message);
         }
     });
-    
+
     //Listen for timeupdate event
     currentSong.addEventListener('timeupdate', () => {
-        console.log("Current Time: ",currentSong.currentTime,"Duration: ",currentSong.duration);
+        console.log("Current Time: ", currentSong.currentTime, "Duration: ", currentSong.duration);
         document.querySelector(".currenttime").innerHTML = `${formatTime(currentSong.currentTime)}`;
         document.querySelector(".songduration").innerHTML = `${formatTime(currentSong.duration)}`;
-        document.querySelector(".circle").style.left = (currentSong.currentTime/currentSong.duration)*100+"%";
+        document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%";
     })
 
-    //Add an event listener to seekbar
-    document.querySelector(".seekbar").addEventListener("click",(e) => {
-      console.log("seekbar event listener", e);
+    //Add an event listener to the seekbar
+    document.querySelector(".seekbar").addEventListener("click", (e) => {
+        console.log("click fired on seekbar");
+        let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
+        document.querySelector(".circle").style.left = percent + "%";
+        currentSong.currentTime = (currentSong.duration) * percent / 100;
+    })
+
+    //Adding event listeer to the next and previous
+    next.addEventListener("click",() => {
+        playMusic(songs[(songs.indexOf(currentSong))+1],true);
     } )
+    previous.addEventListener("click",() => {
+        playMusic(songs[(songs.indexOf(currentSong))+1],true);
+    } )
+
+    //Adding event listner for hamburger
+    document.querySelector(".hamburger").addEventListener("click",() => {
+         document.querySelector(".left").style.left = "0";
+    })
+    document.querySelector(".close").addEventListener("click",() => {
+         document.querySelector(".left").style.left = "-110%";
+    })
 }
 main();
