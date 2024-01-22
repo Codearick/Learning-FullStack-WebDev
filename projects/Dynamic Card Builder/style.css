@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    border: 2px solid black;
+    background-color: black;
+    height: 10vh;
+    width: 100vw;
+    position: fixed;
+    overflow: hidden;
+    z-index: 10;
+}
+
+aside {
+    border: 2px solid black;
+    background-color: rgb(22, 44, 208);
+    height: 100vh;
+    width: 7vw;
+    position: fixed;
+    top: 10vh;
+}
+
+.sideMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    height: 100vh;
+    width: 30vw;
+    margin: 10px;
+    position: fixed;
+    top: 70px;
+    left: 85px;
+    background-color: black;
+}
+.sideMenu .btn {
+    cursor: pointer;
+    height: 10vh;
+    width: 25vw;
+    border: none;
+    border-radius: 18px;
+    background-color: rgb(186, 202, 217);   
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    width: 62vw;
+    height: auto;
+    top: 75px;
+    right: 2px;
+}
+.cards :hover{
+    border: 1px solid rgb(67, 66, 66);
+    background-color: rgb(67, 66, 66);
+}
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid rgb(67, 66, 66);
+    background-color: black;
+    color: white;
+    height: 15vh;
+    width: 58vw;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    z-index: 5;
+}
+
+.thumbNail img {
+    height: 14vh;
+    width: 13vw;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+}
+.duration {
+    font-size: x-small;
+    text-align: center;
+    height: 2vh;
+    width: 3vw;
+    position: relative;
+    right: 68px;
+    top: 45px;
+    border-radius: 15px;
+    background-color: black;
+    padding: 5px;
+    z-index: 1;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding: 5px;
+    top: -37px;
+
+}
+.videoMeta2{
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    top: 36px;
+    right: 382px;
+}
