@@ -67,7 +67,7 @@ body {
 .songlist {
     margin: 44px 0;
     width: fit-content;
-    height: 220px;
+    height: 300px;
     overflow: auto;
 }
 
@@ -253,7 +253,7 @@ body {
 
 .playbarimg {
     position: absolute;
-    left: 19px;
+    left: 24px;
 }
 
 #pause {
@@ -312,6 +312,23 @@ body {
     display: flex;
     gap: 7px;
 }
+.volume{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom:5px;
+    right:300px;
+    gap:3px;
+}
+.volumebar > input{
+    height: 4px;
+    background-color: white;
+    width: 8vw;
+    border-radius: 3px;
+    position: absolute;
+    left:25px;
+    top:10px
+}
 .hamburger {
     display: none;
 }
@@ -336,9 +353,18 @@ body {
         left: -110%;
         transition: all .5s ease-out;
         z-index: 15;
-        width: 30vw;
-        height: 100vw;
+        width: 65vw;
+        height: auto;
         background-color: rgb(0, 0, 0);
+    }
+    .library{
+        width: 65vw;
+        min-height: 61vh;
+        margin:0;
+    }
+    .home{
+        width:65vw;
+        margin:0;
     }
     .cardContainer {
         display: flex;
@@ -347,14 +373,13 @@ body {
         gap: 5px;
     }
     .right {
-        width: 95vw;
+        width: 100vw;
     }
     .spotifyPlaylists {
         max-height: 80vh;
         overflow-y: auto;
         background-color: #121212;
     }
-
     .playbar {
         display: flex;
         align-items: center;

@@ -1,6 +1,10 @@
 console.log("Let's write some javascript");
 let currentSong = new Audio();
+let songs;
 function formatTime(seconds) {
+    if(isNaN((seconds) || seconds < 0)){
+        return " ";
+    }
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60);
 
@@ -39,7 +43,7 @@ const playMusic = async (track, pause = false) => {
 
 async function main() {
     //Get the list of songs
-    let songs = await getSongs();
+    songs = await getSongs();
     const randomIndex = Math.floor(Math.random() * songs.length);
     playMusic(songs[randomIndex], true);
     let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0];
@@ -79,7 +83,7 @@ async function main() {
 
     //Listen for timeupdate event
     currentSong.addEventListener('timeupdate', () => {
-        console.log("Current Time: ", currentSong.currentTime, "Duration: ", currentSong.duration);
+        // console.log("Current Time: ", currentSong.currentTime, "Duration: ", currentSong.duration);
         document.querySelector(".currenttime").innerHTML = `${formatTime(currentSong.currentTime)}`;
         document.querySelector(".songduration").innerHTML = `${formatTime(currentSong.duration)}`;
         document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%";
@@ -92,14 +96,28 @@ async function main() {
         document.querySelector(".circle").style.left = percent + "%";
         currentSong.currentTime = (currentSong.duration) * percent / 100;
     })
-
+   
     //Adding event listeer to the next and previous
     next.addEventListener("click",() => {
-        playMusic(songs[(songs.indexOf(currentSong))+1],true);
-    } )
+       console.log("Next clicked");
+       let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+       if ((index+1) < songs.length){
+        playMusic(songs[index+1]);
+       }   
+       else{
+        playMusic(songs[0]);
+       }
+    });
     previous.addEventListener("click",() => {
-        playMusic(songs[(songs.indexOf(currentSong))+1],true);
-    } )
+        console.log("Previous clicked");
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+        if ((index-1) >= 0 ){
+         playMusic(songs[index-1]);
+        }
+        else{
+            playMusic(songs[songs.length-1]);
+        }
+    } );
 
     //Adding event listner for hamburger
     document.querySelector(".hamburger").addEventListener("click",() => {
@@ -108,5 +126,13 @@ async function main() {
     document.querySelector(".close").addEventListener("click",() => {
          document.querySelector(".left").style.left = "-110%";
     })
+
+    //Adding event listener for volume range
+    volumerange.addEventListener("change",(e) => {
+      console.log(typeof(e.target.value));
+      currentSong.volume = parseInt(e.target.value)/100;
+    })
+
+
 }
 main();
