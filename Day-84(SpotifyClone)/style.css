@@ -315,10 +315,14 @@ body {
 .volume{
     display: flex;
     align-items: center;
-    position: absolute;
-    bottom:5px;
-    right:300px;
-    gap:3px;
+    position: relative;
+    top: 21px;
+    left: 369px;
+    gap: 3px;
+    cursor: pointer;
+}
+.volume input{
+    cursor: pointer;
 }
 .volumebar > input{
     height: 4px;
@@ -337,7 +341,7 @@ body {
     display: none;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:950px) {
     .loginbtn {
         background-color: white;
         color: black;
@@ -417,5 +421,26 @@ body {
 
     .close {
         display: block;
+    }
+    .volume{
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 21px;
+        left: 209px;
+        gap: 3px;
+        cursor: pointer;
+    }
+    .volume input{
+        cursor: pointer;
+    }
+    .volumebar > input{
+        height: 4px;
+        background-color: white;
+        width: 8vw;
+        border-radius: 3px;
+        position: absolute;
+        left:25px;
+        top:10px
     }
 }
