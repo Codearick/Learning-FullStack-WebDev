@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify - Web Player: Music for everyone</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utility.css">
 </head>
 
 <body>
@@ -14,41 +13,35 @@
         <div class="left">
             <div class="home bg-grey rounded m-1 p-1">
                 <div class="logo">
-                    <img class="invert" src="logo.svg" alt="logo">
+                    <img width="110" class="invert" src="img/logo.svg" alt="logo">
+                    <div class="close">
+                        <img width="35" class="invert close" src="img/close.svg" alt="">
+                    </div>
                 </div>
                 <ul>
-                    <li><img class="invert" src="home.svg" alt="home">Home</li>
-                    <li><img class="invert" src="search.svg" alt="search">Search</li>
+                    <li><img class="invert" src="img/home.svg" alt="home">Home</li>
+                    <li><img class="invert" src="img/search.svg" alt="search">Search</li>
                 </ul>
             </div>
 
             <div class="library bg-grey rounded m-1 p-1">
 
                 <div class="heading">
-                    <div><img class="invert" src="playlist.svg" alt=""></div>
+                    <div><img class="invert" src="img/playlist.svg" alt=""></div>
                     <span> Your Library</span>
                 </div>
 
                 <div class="songlist">
                     <ul>
-                    
-                    </ul>
-                </div>
 
-                <div class="footer">
-                    <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
-                    </div>
-                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="right bg-black">
+        <div class="right ">
             <div class="header rounded">
                 <div class="nav">
+                    <img class="invert hamburger" src="img/hamburger.svg" alt="">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                         class="injected-svg" data-src="/icons/arrow-left-01-stroke-rounded.svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="#000000">
@@ -67,52 +60,45 @@
                     <button class="loginbtn">Login</button>
                 </div>
             </div>
-            <div class="spotifyPlaylists">
+            <div class="spotifyPlaylists bg-grey">
                 <h1>Spotify Playlists</h1>
-                <div class="cardContainer">     
-                    
-  
-                    <div class="card">
-                        <div class="play">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 22v-20l18 10-18 10z" /></svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67706f00000002d771dc645afe9b87978b1d3e" alt="">
-                        <h3>All out of 2020s</h3>
-                        <p>The biggest songs of the 2020s </p>
-                    </div>
-  
-                    <div class="card">
-                        <div class="play">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 22v-20l18 10-18 10z" /></svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67706f00000002d771dc645afe9b87978b1d3e" alt="">
-                        <h3>All out of 2020s</h3>
-                        <p>The biggest songs of the 2020s </p>
-                    </div>
-            
-                </div>
-                <div class="playbar">
-                  
-                    <div class="songinfo">
-            
-                    </div>
-                    <div class="songbuttons invert">
-                        <img id="previous" src="prevsong.svg" alt="">
-                        <img id="pause" src="pause.svg" alt="">
-                        <img id="next" src="nextsong.svg" alt="">
-                    </div>
-                    <div class="seekbar">
-                        <div class="circle">
+                <div class="cardContainer">
+                       </div>
 
-                        </div>
-                    </div>
-                    <div class="songtime">
-            
-                    </div>
+            </div>
+        </div>
+        <div class="playbar">
+            <div class="playbarimg">
+                <img class="invert" src="img/music.svg" alt="">
+            </div>
+            <div class="songinfo">
+                <div class="songname"></div>
+                <div class="songartist"></div>
+            </div>
+            <div class="songbuttons">
+                <img class="invert" id="previous" src="img/prevsong.svg" alt="">
+                <div class="pauseplay">
+                    <img id="pause" src="img/pause.svg" alt="">
+                </div>
+                <img class="invert" id="next" src="img/nextsong.svg" alt="">
+            </div>
+            <div class="seekbar">
+                <div class="songduration"></div>
+                <div class="circle">
+
+                </div>
+                <div class="currenttime"></div>
+            </div>
+            <div class="volume">
+                <div class="volumeimg">
+                <img id="volumeimg" class="invert" src="img/volume.svg" alt="">
+                </div>
+                <div class="volumebar">
+                    <input id="volumerange" type="range" name="volume" id="">
                 </div>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
