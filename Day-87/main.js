@@ -9,7 +9,6 @@ fs.writeFile("Rohan2.txt","Rohan is a good boy",()=>{
         //console.log(error,data.toString());
     } )
 })
-
 fs.appendFile("rohan.txt"," and also loves Niru", (e,d)=>{
     console.log(d);
 })
