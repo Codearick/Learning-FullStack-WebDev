@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Local Storage Manager</title>
+    <style>
+        h4{
+            border: 2px solid black;
+            height: 24px;
+            width: auto;
+            margin: 21px;
+            padding: 12px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello </h1>
+    <h2>Q.7 The Local Storage Manager</h2>
+    <p>You are working on a note-taking app, and you want to implement a function named saveNoteToLocalStorage that
+        takes a note object and saves it to the browser's local storage.
+    </p>
+    <div class="note">
+        <h3>Your Note</h3>
+        <h4>&gt; &nbsp; </h4>
+    </div> 
+    <button>Take Note</button> <button>Clear Note</button>
+    <script>
+        if (localStorage.getItem("Name")) {
+            let a = localStorage.getItem("Name");
+            document.getElementsByTagName("h1")[0].innerHTML += a;
+        } else {
+            let a = prompt("Enter you name");
+            document.getElementsByTagName("h1")[0].innerHTML += a;
+            localStorage.setItem("Name", a);
+        }
+        saveNotesToLocalStorage = (note) => {
+            localStorage.setItem("note", note);
+        }
+        document.querySelector("button").addEventListener("click", () => {
+            let a = prompt("Enter your Note");
+            saveNotesToLocalStorage(a);
+            location.reload();
+        })
+        document.querySelectorAll("button")[1].addEventListener("click",()=>{
+            localStorage.removeItem("note");
+            location.reload();
+        })
+        document.querySelector(".note h4").innerHTML += localStorage.getItem("note");
+    </script>
+</body>
+</html>
