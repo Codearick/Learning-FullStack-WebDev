@@ -14,7 +14,6 @@ app.get('/', (req, res) => {
     console.log("Hello this is a post request!")
     res.send('Hello World of POST!')
 })
-
 app.put('/', (req, res) => {
     console.log("Hello from PUT");
     res.send('Hello World of PUT')
