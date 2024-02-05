@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercise</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300 &display=swap');
+            :root {
+                --primarycolor: rgb(243, 184, 243);
+                --secondarycolor: rgb(187, 118, 187);
+                --fontcolor: rgb(246, 230, 230);
+            }
+            body,header {
+                margin: 0;
+                padding: 0;
+            }
+            header{
+                position: sticky;
+                top: 0;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'Poppins', sans-serif;
+            }
+            nav {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                background-color: var(--secondarycolor);
+            }
+            ul {
+                display: flex;
+            }
+            ul li {
+                margin: 7px;
+                padding: 15px;
+                list-style-type: none;
+                font-size: 20px;
+            }
+            ul li a {
+                color: var(--fontcolor);
+                text-decoration: none;
+            }
+            main {
+                overflow: hidden;
+                background-color: black;
+            }
+            .containers {
+                display: flex;
+                margin: 15px;
+                padding: 15px;
+                height: 450px;
+                width: auto;
+                overflow: hidden;
+                background-color: rgb(167, 234, 167);
+            }
+            .containers .container1,
+            .containers .container2 {
+                margin: 56px 56px 56px 70px;
+                padding: 15px;
+                height: 300px;
+                width: 400px;
+                border: 1px solid #ccc;
+            }
+            .containers .container1 {
+                background-color: rgb(199, 155, 163);
+            }
+            .containers .container2 {
+
+                background-color: rgb(161, 161, 235);
+            }
+            .welcome{
+                margin: 14px;
+                padding: 80px;
+                margin-bottom: 90px;
+                height: 40px;
+                width: 1087px;
+                border: 2px solid white;
+                border-radius: 74px;
+                background-color: black;
+                color: var(--fontcolor);
+                font-size: 51px;
+                text-align: center;
+                overflow: hidden;
+            }
+            footer{
+                margin: 0;
+                padding: 0;
+            }
+            .foot{
+                overflow: hidden;
+                height: 80px;
+                border: 2px solid #ccc;
+                background-color: rgb(110, 206, 206);
+            }
+            .foot .botlogo img{
+                margin: 25px;
+                height: 90px;
+                width: 90px;
+                position:fixed;
+                bottom: 0;
+                right: 0;
+                border: 2px solid black;
+                border-radius: 200%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="containers">
+                <div class="container1"></div>
+                <div class="container2"></div>
+            </div>
+            <div class="welcome">
+                Welcome to Sigma Web Development Express!
+            </div>
+        </main>
+        <footer>
+            <div class="foot">
+                <div class="botlogo">
+                    <a href="https://www.vectorstock.com/royalty-free-vector/man-fishing-cartoon-vector-37577713" target="_blank"><img src="fishingman.png" alt="image"></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
