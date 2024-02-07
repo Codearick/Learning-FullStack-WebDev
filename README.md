@@ -92,6 +92,7 @@ My primary goals in this learning journey include:
 - Async/Await and Fetch API in Javascript.
 - try catch and error handling.
 - Classes and Objects.
+- And all the exercises named with "(Ex)" folder in between.
 
 ## Resources
 - [CodeWithHarry | Sigma Web Development Course](https://youtube.com/playlist?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w&si=ys7T7lPpWq73rHbF): Learn web 
