@@ -81,7 +81,8 @@
         <!-------------------------------------------- Second section--------------------------------->
         <div class="second w-[49%] border-[1px] border-x-[rgb(47,51,54)] border-y-black">
             <div class="header flex items-center justify-center border border-y-[rgb(47,51,54)] border-x-[rgba(47,51,54,0)]">
-                <div class="w-[95%] flex ">
+                <div class="w-[95%] flex relative">
+                    <div class="absolute h-1 w-16 rounded-md bg-[rgb(29,155,240)] bottom-0 left-[17.5%]"></div>
                     <div class="flex items-start justify-center font-bold text-[15px] w-[47.5%] py-3 hover:bg-[rgb(33,35,39)]">For you</div>
                     <div class="flex items-center justify-center font-bold text-[15px] w-[47.5%] py-3 hover:bg-[rgb(33,35,39)]">Following</div>
                 </div>
@@ -94,8 +95,7 @@
                     <img class="rounded-full w-10" src="assets/img/myself.jpg" alt="">
                 </div>
                 <div class="mr-3 pt-3">
-                    <textarea class="bg-[rgb(0,0,0,1)] focus:border-none text-[20px]" placeholder="What is happening?!"
-                        name="" id="" cols="48" rows="1"></textarea>
+                    <input class="w-full bg-[rgb(0,0,0,1)] outline-none focus:border-none text-[20px]" type="text" placeholder="What is happening?!">
                 </div>
             </div>
         </div>
@@ -104,7 +104,7 @@
         <div class="third w-[33%]">
             <div class="search mx-7 my-1">
                 <input
-                    class="bg-[rgb(33,35,39)] focus:text-[rgb(29,155,240)] focus:border-[rgb(29,155,240)] w-fit px-16 py-2 rounded-3xl"
+                    class="bg-[rgb(33,35,39)] focus:text-[rgb(29,155,240)] focus:border-[rgb(29,155,240)] outline-none w-fit px-16 py-2 rounded-3xl"
                     type="text" placeholder="Search">
             </div>
 
@@ -112,7 +112,7 @@
                 <h2 class=" text-[20px] font-bold">Subscribe to Premium</h2>
                 <div class="text-[15px]">
                     Subscribe to unlock new features and if eligible, receive a share of ads revenue.
-                </div>
+                </div> 
                 <div class="text-[15px] font-semibold bg-[rgb(29,155,240)] w-fit border-none rounded-3xl">
                     <button class="py-1.5 px-4">
                         Subscribe
