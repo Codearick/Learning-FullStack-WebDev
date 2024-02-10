@@ -91,15 +91,67 @@
                 </div>
             </div>
             <div class="status flex items-center px-3">
-                <div class="img mr-3 pt-3">
+                <div class="img mr-4 mb-10 pb-5">
                     <img class="rounded-full w-10" src="assets/img/myself.jpg" alt="">
                 </div>
-                <div class="mr-3 pt-3">
-                    <input class="w-full bg-[rgb(0,0,0,1)] outline-none focus:border-none text-[20px]" type="text" placeholder="What is happening?!">
+                <div class=" flex flex-col w-full mx-2 pt-4">
+                    <input class="w-full bg-[rgb(0,0,0,1)] outline-none text-[20px]" type="text" placeholder="What is happening?!">
+                    <div class="flex items-center gap-1 text-[rgb(29,155,240)] text-[14px] font-bold my-4">
+                        <span class="material-symbols-outlined text-[15px]">
+                            public
+                        </span>
+                        <span>Everyone can reply</span>
+                    </div>
+                    <div class="w-[95%] h-[1px] bg-slate-600"></div>
+                    <div class="flex items-center justify-between mt-3">
+                        <div class="flex gap-3 text-[rgb(29,155,240)]">
+                            <span class="material-symbols-outlined">
+                                image
+                            </span>
+                            <span class="material-symbols-outlined">
+                                gif_box
+                            </span>
+                            <span class="material-symbols-outlined">
+                                ballot
+                            </span>
+                            <span class="material-symbols-outlined">
+                                mood
+                            </span>
+                            <span class="material-symbols-outlined">
+                                pending_actions
+                            </span>
+                            <span class="material-symbols-outlined">
+                                location_on
+                            </span>
+                        </div>
+                        <div>
+                            <button class="bg-[rgb(29,155,240)] text-[15px] font-semibold rounded-3xl py-1 px-4">
+                                Post
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-[1px] border-y-[rgb(47,51,54)] mt-3"></div>
+            <div class="posts p-3">
+                <div class="post flex items-center gap-3">
+                    <div class="img">
+                        <img class="rounded-full w-8" src="./assets/img/myself.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <span class="font-bold"> Developer Avocado 🥑 </span>
+                        <span class="text-[rgb(113,118,122)]">@dev_avocado · 3h</span>
+                        <div>
+                            Caption
+                        </div>
+                        <div class="img">
+                            <img src="" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
+ 
         <!-------------------------------------------- Third section ---------------------------------->
         <div class="third w-[33%]">
             <div class="search mx-7 my-1">
@@ -198,5 +250,4 @@
         </div>
     </div>
 </body>
-
 </html>
