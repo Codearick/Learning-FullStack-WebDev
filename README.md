@@ -92,8 +92,10 @@ My primary goals in this learning journey include:
 - Async/Await and Fetch API in Javascript.
 - try catch and error handling.
 - Classes and Objects.
-- Some advanced Javascript topics on Day-83[Day-083]
+- Some advanced Javascript topics on Day-82[Day-082]
+- Some Javascript Interview Questions.
 - And all the exercises named with "(Ex)" folder in between.
+- Project - Spotify Clone
 
 ## Resources
 - [CodeWithHarry | Sigma Web Development Course](https://youtube.com/playlist?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w&si=ys7T7lPpWq73rHbF): Learn web 
