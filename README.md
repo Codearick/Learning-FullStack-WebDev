@@ -92,6 +92,7 @@ My primary goals in this learning journey include:
 - Async/Await and Fetch API in Javascript.
 - try catch and error handling.
 - Classes and Objects.
+- Some advanced Javascript topics on Day-83[Day-083]
 - And all the exercises named with "(Ex)" folder in between.
 
 ## Resources
