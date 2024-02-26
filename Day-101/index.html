@@ -11,67 +11,85 @@
 </head>
 
 <body class="bg-[rgba(0,0,0,1)] text-white">
-    <div class="container flex mx-auto">
+    <div class="container flex mx-auto relative">
         <div class="first p-3 pt-3 w-[23%] flex flex-col gap-4">
-            <div class="logo px-3 py-1">
-                <svg viewBox="0 0 24 24" fill="white" aria-hidden="true"
-                    class="w-7 h-7 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
-                    <g>
-                        <path
-                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
-                        </path>
-                    </g>
-                </svg>
-            </div>
-            <div class="sidebar">
+            <div class="sidebar fixed top-2">
+                <div class="logo px-3 mb-3">
+                    <svg viewBox="0 0 24 24" fill="white" aria-hidden="true"
+                        class="w-7 h-7 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
+                        <g>
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
                 <ul class="flex text-[20px] font-[600] gap-3 flex-col">
                     <li
                         class="flex items-center gap-3 w-fit hover:bg-[rgb(29,29,29)] hover:border-none hover:rounded-3xl px-3 py-1 cursor-pointer">
                         <span class="material-symbols-outlined
                         text-3xl">
                             home
-                        </span>Home
+                        </span><span class="xl:block hidden">Home</span>
                     </li>
                     <li
                         class="flex items-center gap-3 w-fit hover:bg-[rgb(29,29,29)] hover:border-none hover:rounded-3xl px-3 py-1 cursor-pointer">
                         <span class="material-symbols-outlined text-3xl">
                             search
-                        </span>Explore
+                        </span><span class="xl:block hidden">Explore</span>
                     </li>
                     <li
                         class="flex items-center gap-3 w-fit hover:bg-[rgb(29,29,29)] hover:border-none hover:rounded-3xl px-3 py-1 cursor-pointer">
                         <span class="material-symbols-outlined text-3xl">
                             notifications
-                        </span>Notifications
+                        </span><span class="xl:block hidden">Notifications</span>
                     </li>
                     <li
                         class="flex items-center gap-3 w-fit hover:bg-[rgb(29,29,29)] hover:border-none hover:rounded-3xl px-3 py-1 cursor-pointer">
                         <span class="material-symbols-outlined text-3xl">
                             message
-                        </span>Messages
+                        </span><span class="xl:block hidden">Messages</span>
                     </li>
                     <li
                         class="flex items-center gap-3 w-fit hover:bg-[rgb(29,29,29)] hover:border-none hover:rounded-3xl px-3 py-1 cursor-pointer">
                         <span class="material-symbols-outlined text-3xl">
                             home
-                        </span>Grok
+                        </span><span class="xl:block hidden">Grok</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-3 w-fit hover:bg-[rgb(29,29,29)] hover:border-none hover:rounded-3xl px-3 py-1 cursor-pointer">
+                        <span class="material-symbols-outlined text-3xl">
+                            list
+                        </span><span class="xl:block hidden">List</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-3 w-fit hover:bg-[rgb(29,29,29)] hover:border-none hover:rounded-3xl px-3 py-1 cursor-pointer">
+                        <span class="material-symbols-outlined text-3xl">
+                            group
+                        </span><span class="xl:block hidden">Communities</span>
                     </li>
                     <li
                         class="flex items-center gap-3 w-fit hover:bg-[rgb(29,29,29)] hover:border-none hover:rounded-3xl px-3 py-1 cursor-pointer">
                         <span class="material-symbols-outlined text-3xl">
                             person
-                        </span>Profile
+                        </span><span class="xl:block hidden">Profile</span>
                     </li>
                     <li
                         class="flex items-center gap-3 w-fit hover:bg-[rgb(29,29,29)] hover:border-none hover:rounded-3xl px-3 py-1 cursor-pointer">
                         <span class="material-symbols-outlined text-3xl">
                             more_horiz
-                        </span>More
+                        </span><span class="xl:block hidden">More</span>
                     </li>
                     <li
-                        class="flex justify-center text-[17px] font-semibold bg-[rgb(29,155,240)] w-34 px-12 py-3 border-none rounded-3xl">
+                        class="hidden xl:flex justify-center text-[17px] font-semibold bg-[rgb(29,155,240)] w-34 px-12 py-3 border-none rounded-3xl">
                         <button>
                             Post
+                        </button>
+                    </li>
+                    <li
+                        class="fixed bottom-3 right-7 xl:hidden sm:flex flex justify-center text-[17px] font-semibold bg-[rgb(29,155,240)] w-3 px-7 py-4 border-none rounded-full">
+                        <button>
+                         <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-1472mwg r-lrsllp" style="fill: rgb(255, 255, 255);"><g><path d="M23 3c-6.62-.1-10.38 2.421-13.05 6.03C7.29 12.61 6 17.331 6 22h2c0-1.007.07-2.012.19-3H12c4.1 0 7.48-3.082 7.94-7.054C22.79 10.147 23.17 6.359 23 3zm-7 8h-1.5v2H16c.63-.016 1.2-.08 1.72-.188C16.95 15.24 14.68 17 12 17H8.55c.57-2.512 1.57-4.851 3-6.78 2.16-2.912 5.29-4.911 9.45-5.187C20.95 8.079 19.9 11 16 11zM4 9V6H1V4h3V1h2v3h3v2H6v3H4z"></path></g></svg>
                         </button>
                     </li>
                 </ul>
@@ -79,12 +97,17 @@
         </div>
 
         <!-------------------------------------------- Second section--------------------------------->
-        <div class="second w-[49%] border-[1px] border-x-[rgb(47,51,54)] border-y-black">
-            <div class="header flex items-center justify-center border border-y-[rgb(47,51,54)] border-x-[rgba(47,51,54,0)]">
+        <div class="second xl:w-[49%] border-[1px] border-x-[rgb(47,51,54)] border-y-black overflow-scroll">
+            <div
+                class="header flex items-center justify-center border border-y-[rgb(47,51,54)] border-x-[rgba(47,51,54,0)]">
                 <div class="w-[95%] flex relative">
                     <div class="absolute h-1 w-16 rounded-md bg-[rgb(29,155,240)] bottom-0 left-[17.5%]"></div>
-                    <div class="flex items-start justify-center font-bold text-[15px] w-[47.5%] py-3 hover:bg-[rgb(33,35,39)]">For you</div>
-                    <div class="flex items-center justify-center font-bold text-[15px] w-[47.5%] py-3 hover:bg-[rgb(33,35,39)]">Following</div>
+                    <div
+                        class="flex items-start justify-center font-bold text-[15px] w-[47.5%] py-3 hover:bg-[rgb(33,35,39)]">
+                        For you</div>
+                    <div
+                        class="flex items-center justify-center font-bold text-[15px] w-[47.5%] py-3 hover:bg-[rgb(33,35,39)]">
+                        Following</div>
                 </div>
                 <div class="w-[5%] flex items-center">
                     <span class="text-[20px] material-symbols-outlined">settings</span>
@@ -95,7 +118,8 @@
                     <img class="rounded-full w-10" src="assets/img/myself.jpg" alt="">
                 </div>
                 <div class=" flex flex-col w-full mx-2 pt-4">
-                    <input class="w-full bg-[rgb(0,0,0,1)] outline-none text-[20px]" type="text" placeholder="What is happening?!">
+                    <input class="w-full bg-[rgb(0,0,0,1)] outline-none text-[20px]" type="text"
+                        placeholder="What is happening?!">
                     <div class="flex items-center gap-1 text-[rgb(29,155,240)] text-[14px] font-bold my-4">
                         <span class="material-symbols-outlined text-[15px]">
                             public
@@ -133,121 +157,386 @@
                 </div>
             </div>
             <div class="border-[1px] border-y-[rgb(47,51,54)] mt-3"></div>
-            <div class="posts p-3">
-                <div class="post flex items-center gap-3">
-                    <div class="img">
-                        <img class="rounded-full w-8" src="./assets/img/myself.jpg" alt="">
+
+            <div class="posts flex items-center gap-3 p-2 cursor-pointer">
+                <div class="profileimg mb-[35vh] pb-16">
+                    <img class="rounded-full w-[6vw]" src="./assets/img/myself.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="username">
+                        <span class="font-bold text-[15px] hover:underline"> Developer Avocado 🥑 </span>
+                        <span class="text-[rgb(113,118,122)] text-[15px]">@dev_avocado · 3h</span>
                     </div>
-                    <div class="content">
-                        <span class="font-bold"> Developer Avocado 🥑 </span>
-                        <span class="text-[rgb(113,118,122)]">@dev_avocado · 3h</span>
-                        <div>
-                            Caption
-                        </div>
-                        <div class="img">
-                            <img src="" alt="">
-                        </div>
+                    <div class="text-[15px]">
+                        Guess the output of the program!
+                    </div>
+                    <div class="img">
+                        <img src="./assets/img/post.jpeg" alt="">
+                    </div>
+                    <div class="flex mt-2">
+                       <ul class="flex text-[13px] text-[rgb(113,118,122)]">
+                        <li class="flex align-center hover:text-[rgb(29,155,240)]"><span class="material-symbols-outlined">
+                            chat_bubble
+                            </span>162
+                        </li>
+                        <li class="ml-14 flex align-center hover:text-[rgb(83,236,136)]"><span class="material-symbols-outlined">
+                            cached
+                            </span>232
+                        </li>
+                        <li class="ml-16 flex align-center hover:text-[rgb(229,68,106)]"><span class="material-symbols-outlined">
+                            favorite
+                            </span>223
+                        </li>
+                        <li class="ml-16 flex align-center hover:text-[rgb(29,155,240)]"><span class="material-symbols-outlined">
+                            analytics
+                            </span>212
+                        </li>
+                        <li class="ml-16 flex gap-1 align-center ">
+                            <span class="material-symbols-outlined hover:text-[rgb(29,155,240)]">
+                            bookmark
+                            </span>
+                            <span class="material-symbols-outlined hover:text-[rgb(29,155,240)]">
+                            share
+                            </span>
+                        </li>
+                       </ul>
                     </div>
                 </div>
             </div>
+            <div class="border-[1px] border-y-[rgb(47,51,54)] mt-3"></div>
+            <div class="posts flex items-center gap-3 p-2 cursor-pointer">
+                <div class="profileimg w-12 mb-[64vh] pb-16">
+                    <img class="rounded-full w-[6vw]" src="./assets/img/elonbhai.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="username">
+                        <span class="font-bold text-[15px] hover:underline"> Elon Bhai </span>
+                        <span class="text-[rgb(113,118,122)] text-[15px]">@X_Ka_Malik · 3h</span>
+                    </div>
+                    <div class="text-[15px] mb-1">
+                        Choose your path!
+                    </div>
+                    <div class="img">
+                        <img src="./assets/img/elonpost.jpeg" alt="">
+                    </div>
+                    <div class="flex mt-2">
+                       <ul class="flex text-[13px] text-[rgb(113,118,122)]">
+                        <li class="flex align-center hover:text-[rgb(29,155,240)]"><span class="material-symbols-outlined">
+                            chat_bubble
+                            </span>162
+                        </li>
+                        <li class="ml-14 flex align-center hover:text-[rgb(83,236,136)]"><span class="material-symbols-outlined">
+                            cached
+                            </span>232
+                        </li>
+                        <li class="ml-16 flex align-center hover:text-[rgb(229,68,106)]"><span class="material-symbols-outlined">
+                            favorite
+                            </span>223
+                        </li>
+                        <li class="ml-16 flex align-center hover:text-[rgb(29,155,240)]"><span class="material-symbols-outlined">
+                            analytics
+                            </span>212
+                        </li>
+                        <li class="ml-16 flex gap-1 align-center ">
+                            <span class="material-symbols-outlined hover:text-[rgb(29,155,240)]">
+                            bookmark
+                            </span>
+                            <span class="material-symbols-outlined hover:text-[rgb(29,155,240)]">
+                            share
+                            </span>
+                        </li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-[1px] border-y-[rgb(47,51,54)] mt-3"></div>
+            <div class="posts flex items-center gap-3 p-2 cursor-pointer">
+                <div class="profileimg mb-[32vh] pb-16">
+                    <img class="rounded-full w-[6vw]" src="./assets/img/myself.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="username">
+                        <span class="font-bold text-[15px] hover:underline"> Developer Avocado 🥑 </span>
+                        <span class="text-[rgb(113,118,122)] text-[15px]">@dev_avocado · 3h</span>
+                    </div>
+                    <div class="text-[15px]">
+                        Guess the output of the program!
+                    </div>
+                    <div class="img">
+                        <img src="./assets/img/post.jpeg" alt="">
+                    </div>
+                    <div class="flex mt-2">
+                       <ul class="flex text-[13px] text-[rgb(113,118,122)]">
+                        <li class="flex align-center hover:text-[rgb(29,155,240)]"><span class="material-symbols-outlined">
+                            chat_bubble
+                            </span>162
+                        </li>
+                        <li class="ml-14 flex align-center hover:text-[rgb(83,236,136)]"><span class="material-symbols-outlined">
+                            cached
+                            </span>232
+                        </li>
+                        <li class="ml-16 flex align-center hover:text-[rgb(229,68,106)]"><span class="material-symbols-outlined">
+                            favorite
+                            </span>223
+                        </li>
+                        <li class="ml-16 flex align-center hover:text-[rgb(29,155,240)]"><span class="material-symbols-outlined">
+                            analytics
+                            </span>212
+                        </li>
+                        <li class="ml-16 flex gap-1 align-center ">
+                            <span class="material-symbols-outlined hover:text-[rgb(29,155,240)]">
+                            bookmark
+                            </span>
+                            <span class="material-symbols-outlined hover:text-[rgb(29,155,240)]">
+                            share
+                            </span>
+                        </li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-[1px] border-y-[rgb(47,51,54)] mt-3"></div>
+            <div class="posts flex items-center gap-3 p-2 cursor-pointer">
+                <div class="profileimg mb-[32vh] pb-16">
+                    <img class="rounded-full w-[6vw]" src="./assets/img/myself.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="username">
+                        <span class="font-bold text-[15px] hover:underline"> Developer Avocado 🥑 </span>
+                        <span class="text-[rgb(113,118,122)] text-[15px]">@dev_avocado · 3h</span>
+                    </div>
+                    <div class="text-[15px]">
+                        Guess the output of the program!
+                    </div>
+                    <div class="img">
+                        <img src="./assets/img/post.jpeg" alt="">
+                    </div>
+                    <div class="flex mt-2">
+                       <ul class="flex text-[13px] text-[rgb(113,118,122)]">
+                        <li class="flex align-center hover:text-[rgb(29,155,240)]"><span class="material-symbols-outlined">
+                            chat_bubble
+                            </span>162
+                        </li>
+                        <li class="ml-14 flex align-center hover:text-[rgb(83,236,136)]"><span class="material-symbols-outlined">
+                            cached
+                            </span>232
+                        </li>
+                        <li class="ml-16 flex align-center hover:text-[rgb(229,68,106)]"><span class="material-symbols-outlined">
+                            favorite
+                            </span>223
+                        </li>
+                        <li class="ml-16 flex align-center hover:text-[rgb(29,155,240)]"><span class="material-symbols-outlined">
+                            analytics
+                            </span>212
+                        </li>
+                        <li class="ml-16 flex gap-1 align-center ">
+                            <span class="material-symbols-outlined hover:text-[rgb(29,155,240)]">
+                            bookmark
+                            </span>
+                            <span class="material-symbols-outlined hover:text-[rgb(29,155,240)]">
+                            share
+                            </span>
+                        </li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-[1px] border-y-[rgb(47,51,54)] mt-3"></div>
+            <div class="posts flex items-center gap-3 p-2 cursor-pointer">
+                <div class="profileimg mb-[32vh] pb-16">
+                    <img class="rounded-full w-[6vw]" src="./assets/img/myself.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="username">
+                        <span class="font-bold text-[15px] hover:underline"> Developer Avocado 🥑 </span>
+                        <span class="text-[rgb(113,118,122)] text-[15px]">@dev_avocado · 3h</span>
+                    </div>
+                    <div class="text-[15px]">
+                        Guess the output of the program!
+                    </div>
+                    <div class="img">
+                        <img src="./assets/img/post.jpeg" alt="">
+                    </div>
+                    <div class="flex mt-2">
+                       <ul class="flex text-[13px] text-[rgb(113,118,122)]">
+                        <li class="flex align-center hover:text-[rgb(29,155,240)]"><span class="material-symbols-outlined">
+                            chat_bubble
+                            </span>162
+                        </li>
+                        <li class="ml-14 flex align-center hover:text-[rgb(83,236,136)]"><span class="material-symbols-outlined">
+                            cached
+                            </span>232
+                        </li>
+                        <li class="ml-16 flex align-center hover:text-[rgb(229,68,106)]"><span class="material-symbols-outlined">
+                            favorite
+                            </span>223
+                        </li>
+                        <li class="ml-16 flex align-center hover:text-[rgb(29,155,240)]"><span class="material-symbols-outlined">
+                            analytics
+                            </span>212
+                        </li>
+                        <li class="ml-16 flex gap-1 align-center ">
+                            <span class="material-symbols-outlined hover:text-[rgb(29,155,240)]">
+                            bookmark
+                            </span>
+                            <span class="material-symbols-outlined hover:text-[rgb(29,155,240)]">
+                            share
+                            </span>
+                        </li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-[1px] border-y-[rgb(47,51,54)] mt-3"></div>
+            <div class="posts flex items-center gap-3 p-2 cursor-pointer">
+                <div class="profileimg mb-[32vh] pb-16">
+                    <img class="rounded-full w-[6vw]" src="./assets/img/myself.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="username">
+                        <span class="font-bold text-[15px] hover:underline"> Developer Avocado 🥑 </span>
+                        <span class="text-[rgb(113,118,122)] text-[15px]">@dev_avocado · 3h</span>
+                    </div>
+                    <div class="text-[15px]">
+                        Guess the output of the program!
+                    </div>
+                    <div class="img">
+                        <img src="./assets/img/post.jpeg" alt="">
+                    </div>
+                    <div class="flex mt-2">
+                       <ul class="flex text-[13px] text-[rgb(113,118,122)]">
+                        <li class="flex align-center hover:text-[rgb(29,155,240)]"><span class="material-symbols-outlined">
+                            chat_bubble
+                            </span>162
+                        </li>
+                        <li class="ml-14 flex align-center hover:text-[rgb(83,236,136)]"><span class="material-symbols-outlined">
+                            cached
+                            </span>232
+                        </li>
+                        <li class="ml-16 flex align-center hover:text-[rgb(229,68,106)]"><span class="material-symbols-outlined">
+                            favorite
+                            </span>223
+                        </li>
+                        <li class="ml-16 flex align-center hover:text-[rgb(29,155,240)]"><span class="material-symbols-outlined">
+                            analytics
+                            </span>212
+                        </li>
+                        <li class="ml-16 flex gap-1 align-center ">
+                            <span class="material-symbols-outlined hover:text-[rgb(29,155,240)]">
+                            bookmark
+                            </span>
+                            <span class="material-symbols-outlined hover:text-[rgb(29,155,240)]">
+                            share
+                            </span>
+                        </li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+            
         </div>
- 
+
         <!-------------------------------------------- Third section ---------------------------------->
-        <div class="third w-[33%]">
-            <div class="search mx-7 my-1">
-                <input
+        <div class="third w-[33%] lg:block hidden">
+            <div class="sticky top-0">    
+                <div class="search mx-7 my-1">
+                    <input
                     class="bg-[rgb(33,35,39)] focus:text-[rgb(29,155,240)] focus:border-[rgb(29,155,240)] outline-none w-fit px-16 py-2 rounded-3xl"
                     type="text" placeholder="Search">
-            </div>
-
-            <div class="subscribe flex gap-1.5 flex-col px-3 py-2 bg-[rgb(22,24,28)] mx-7 my-3 p-3 rounded-xl">
-                <h2 class=" text-[20px] font-bold">Subscribe to Premium</h2>
-                <div class="text-[15px]">
-                    Subscribe to unlock new features and if eligible, receive a share of ads revenue.
-                </div> 
-                <div class="text-[15px] font-semibold bg-[rgb(29,155,240)] w-fit border-none rounded-3xl">
-                    <button class="py-1.5 px-4">
-                        Subscribe
-                    </button>
                 </div>
-            </div>
-
-            <div class="whats bg-[rgb(22,24,28)] mx-7 my-3 pb-1 rounded-xl">
-                <h2 class="text-[20px] font-bold px-3 py-2">What's happening</h2>
-                <div class="item hover:bg-[rgb(33,35,39)] px-3 py-2 cursor-pointer">
-                    <div class="text-[13px] text-[rgb(113,118,122)]">Trending in India</div>
-                    <div class="font-bold text-[15px]">SigmaBatchOP</div>
-                    <div class="text-[13px] text-[rgb(113,118,122)]">5.5M posts</div>
-                </div>
-                <div class="item px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer">
-                    <div class="text-[13px] text-[rgb(113,118,122)]">Trending in India</div>
-                    <div class="font-bold text-[15px]">SigmaBatchOP</div>
-                    <div class="text-[13px] text-[rgb(113,118,122)]">5.5M posts</div>
-                </div>
-                <div class="item px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer">
-                    <div class="text-[13px] text-[rgb(113,118,122)]">Trending in India</div>
-                    <div class="font-bold text-[15px]">SigmaBatchOP</div>
-                    <div class="text-[13px] text-[rgb(113,118,122)]">5.5M posts</div>
-                </div>
-                <div class="item px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer">
-                    <div class="text-[13px] text-[rgb(113,118,122)]">Trending in India</div>
-                    <div class="font-bold text-[15px]">SigmaBatchOP</div>
-                    <div class="text-[13px] text-[rgb(113,118,122)]">5.5M posts</div>
-                </div>
-                <div class="item px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer">
-                    <div class="text-[13px] text-[rgb(113,118,122)]">Trending in India</div>
-                    <div class="font-bold text-[15px]">SigmaBatchOP</div>
-                    <div class="text-[13px] text-[rgb(113,118,122)]">5.5M posts</div>
-                </div>
-                <div class="text-[rgb(29,155,240)] text-[15px] px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer"> Show more</div>
-            </div>
-            <div class="whotofollow bg-[rgb(22,24,28)] mx-7 my-3 rounded-xl">
-                <h2 class="text-[20px] font-bold px-3 py-2">Who to follow</h2>
-                <div class="item flex items-center justify-between px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer">
-                    <div class=" flex gap-3 text-[13px]">
-                        <img class="rounded-full w-10 h-10" src="assets/img/elonbhai.jpg" alt="">
-                        <div class="font-bold text-[15px]">
-                            <div class="hover:underline">Elon Musk</div>
-                            <div class="text-[13px] font-[400] text-[rgb(113,118,122)]">@elonbhai</div>
-                        </div>
+                
+                <div class="subscribe flex gap-1.5 flex-col px-3 py-2 bg-[rgb(22,24,28)] mx-7 my-3 p-3 rounded-xl">
+                    <h2 class=" text-[20px] font-bold">Subscribe to Premium</h2>
+                    <div class="text-[15px]">
+                        Subscribe to unlock new features and if eligible, receive a share of ads revenue.
                     </div>
-                    <div class="font-[700]">
-                        <button class="bg-slate-50 text-black text-[14px] px-4 py-1 rounded-3xl">
-                            Follow
+                    <div class="text-[15px] font-semibold bg-[rgb(29,155,240)] w-fit border-none rounded-3xl">
+                        <button class="py-1.5 px-4">
+                            Subscribe
                         </button>
                     </div>
                 </div>
-                <div class="item flex items-center justify-between px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer">
-                    <div class=" flex gap-3 text-[13px]">
-                        <img class="rounded-full w-10 h-10" src="assets/img/elonbhai.jpg" alt="">
-                        <div class="font-bold text-[15px]">
-                            <div class="hover:underline">Elon Musk</div>
-                            <div class="text-[13px] font-[400] text-[rgb(113,118,122)]">@elonbhai</div>
+                
+                <div class="whats bg-[rgb(22,24,28)] mx-7 my-3 pb-1 rounded-xl">
+                    <h2 class="text-[20px] font-bold px-3 py-2">What's happening</h2>
+                    <div class="item hover:bg-[rgb(33,35,39)] px-3 py-2 cursor-pointer">
+                        <div class="text-[13px] text-[rgb(113,118,122)]">Trending in India</div>
+                        <div class="font-bold text-[15px]">SigmaBatchOP</div>
+                        <div class="text-[13px] text-[rgb(113,118,122)]">5.5M posts</div>
+                    </div>
+                    <div class="item px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer">
+                        <div class="text-[13px] text-[rgb(113,118,122)]">Trending in India</div>
+                        <div class="font-bold text-[15px]">SigmaBatchOP</div>
+                        <div class="text-[13px] text-[rgb(113,118,122)]">5.5M posts</div>
+                    </div>
+                    <div class="item px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer">
+                        <div class="text-[13px] text-[rgb(113,118,122)]">Trending in India</div>
+                        <div class="font-bold text-[15px]">SigmaBatchOP</div>
+                        <div class="text-[13px] text-[rgb(113,118,122)]">5.5M posts</div>
+                    </div>
+                    <div class="item px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer">
+                        <div class="text-[13px] text-[rgb(113,118,122)]">Trending in India</div>
+                        <div class="font-bold text-[15px]">SigmaBatchOP</div>
+                        <div class="text-[13px] text-[rgb(113,118,122)]">5.5M posts</div>
+                    </div>
+                    <div class="item px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer">
+                        <div class="text-[13px] text-[rgb(113,118,122)]">Trending in India</div>
+                        <div class="font-bold text-[15px]">SigmaBatchOP</div>
+                        <div class="text-[13px] text-[rgb(113,118,122)]">5.5M posts</div>
+                    </div>
+                    <div class="text-[rgb(29,155,240)] text-[15px] px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer"> Show
+                        more</div>
+                    </div>
+                    <div class="whotofollow bg-[rgb(22,24,28)] mx-7 my-3 rounded-xl">
+                        <h2 class="text-[20px] font-bold px-3 py-2">Who to follow</h2>
+                        <div class="item flex items-center justify-between px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer">
+                            <div class=" flex gap-3 text-[13px]">
+                                <img class="rounded-full w-10 h-10" src="assets/img/elonbhai.jpg" alt="">
+                                <div class="font-bold text-[15px]">
+                                    <div class="hover:underline">Elon Musk</div>
+                                    <div class="text-[13px] font-[400] text-[rgb(113,118,122)]">@elonbhai</div>
+                                </div>
+                            </div>
+                            <div class="font-[700]">
+                                <button class="bg-slate-50 text-black text-[14px] px-4 py-1 rounded-3xl">
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+                        <div class="item flex items-center justify-between px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer">
+                            <div class=" flex gap-3 text-[13px]">
+                                <img class="rounded-full w-10 h-10" src="assets/img/elonbhai.jpg" alt="">
+                                <div class="font-bold text-[15px]">
+                                    <div class="hover:underline">Elon Musk</div>
+                                    <div class="text-[13px] font-[400] text-[rgb(113,118,122)]">@elonbhai</div>
+                                </div>
+                            </div>
+                            <div class="font-[700]">
+                                <button class="bg-slate-50 text-black text-[14px] px-4 py-1 rounded-3xl">
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+                        <div class="item flex items-center justify-between px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer">
+                            <div class=" flex gap-3 text-[13px]">
+                                <img class="rounded-full w-10 h-10" src="assets/img/elonbhai.jpg" alt="">
+                                <div class="font-bold text-[15px]">
+                                    <div class="hover:underline">Elon Musk</div>
+                                    <div class="text-[13px] font-[400] text-[rgb(113,118,122)]">@elonbhai</div>
+                                </div>
+                            </div>
+                            <div class="font-[700]">
+                                <button class="bg-slate-50 text-black text-[14px] px-4 py-1 rounded-3xl">
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+                        <div class="text-[rgb(29,155,240)] text-[15px] px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer"> Show
+                            more</div>
                         </div>
                     </div>
-                    <div class="font-[700]">
-                        <button class="bg-slate-50 text-black text-[14px] px-4 py-1 rounded-3xl">
-                            Follow
-                        </button>
-                    </div>
                 </div>
-                <div class="item flex items-center justify-between px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer">
-                    <div class=" flex gap-3 text-[13px]">
-                        <img class="rounded-full w-10 h-10" src="assets/img/elonbhai.jpg" alt="">
-                        <div class="font-bold text-[15px]">
-                            <div class="hover:underline">Elon Musk</div>
-                            <div class="text-[13px] font-[400] text-[rgb(113,118,122)]">@elonbhai</div>
-                        </div>
-                    </div>
-                    <div class="font-[700]">
-                        <button class="bg-slate-50 text-black text-[14px] px-4 py-1 rounded-3xl">
-                            Follow
-                        </button>
-                    </div>
-                </div>
-                <div class="text-[rgb(29,155,240)] text-[15px] px-3 py-2 hover:bg-[rgb(33,35,39)] cursor-pointer"> Show more</div>
             </div>
-        </div>
-    </div>
-</body>
-</html>
+            </body>
+            
+            </html>
