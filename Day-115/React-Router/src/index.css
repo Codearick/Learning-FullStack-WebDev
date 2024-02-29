@@ -1,0 +1,35 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+nav{
+  display: flex;
+  gap: 34px;
+  background-color: slategrey;
+}
+
+a li{
+  list-style: none;
+  color: white;
+  padding: 23px;
+}
+a{
+  text-decoration: none;
+}
+
+.navoption{
+  display: flex;
+  padding: 23px;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  font-weight: 500;
+}
+.red{
+  text-decoration: underline;
+  text-decoration-color: red;
+  font-style: italic;
+  font-weight: 900;
+  font-size:45px
+}
